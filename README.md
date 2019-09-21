@@ -1,2 +1,3 @@
 # FibonacciCalculator
-Calculates the Fibonacci Sequence
+Calculates the First N numbers of Fibonacci Sequence
+
