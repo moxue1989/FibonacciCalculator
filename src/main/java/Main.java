@@ -3,6 +3,8 @@ import calculator.Calculator;
 import calculator.FibonacciCalculator;
 import validation.UserInputValidator;
 
+import java.time.Duration;
+import java.time.Instant;
 import java.util.List;
 import java.util.Scanner;
 
@@ -24,8 +26,14 @@ public class Main {
                 System.out.println("Goodbye!");
                 break;
             }
+            Instant startTime = Instant.now();
             List<String> output = fibonacciCalculator.process(input);
+            Instant endTime = Instant.now();
+
             output.forEach(System.out::println);
+            Duration duration = Duration.between(startTime, endTime);
+            System.out.println("Completed in : " + duration.abs().toMillis() + " ms");
+
             System.out.println();
         }
     }
